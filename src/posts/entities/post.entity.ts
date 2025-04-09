@@ -1,5 +1,5 @@
 // filepath: /Users/kovvurubala.krishna/Desktop/jk-project/backend/src/posts/entities/post.entity.ts
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, CreateDateColumn, UpdateDateColumn } from 'typeorm';
 import { User } from '../../users/entities/user.entity'; // Adjust the path as necessary
 
 @Entity('posts')
@@ -18,4 +18,10 @@ export class Post {
 
   @ManyToOne(() => User, user => user.posts, { onDelete: 'CASCADE' })
   user: User;
+
+  @CreateDateColumn({ type: 'timestamp' })
+  created_at: Date;
+
+  @UpdateDateColumn({ type: 'timestamp' })
+  updated_at: Date;
 }

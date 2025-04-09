@@ -1,5 +1,6 @@
 // src/posts/posts.controller.ts
 import { Controller, Get, Post, Body, Param, Req, UseGuards } from '@nestjs/common';
+import { Post as PostEntity } from './entities/post.entity'; // Adjust the path as needed
 import { PostsService } from './posts.service';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 
@@ -19,8 +20,7 @@ export class PostsController {
     return this.postsService.create(body.title, body.body, req?.user?.userId);
   }
 
-  @Get(':id')
-  getOne(@Param('id') id: string) {
-    return this.postsService.findById(+id);
+  async findById(@Param('id') id: number): Promise<PostEntity | undefined> {
+    return this.postsService.findById(id);
   }
 }
