@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>facebook.strategy.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="../../doc-style.css" />
+  <script src="../../doc-filelist.js"></script>
+  <script>
+    var relativeDir = "../../";
+    var thisFile = "dist/auth/facebook.strategy.js";
+    var defaultSidebar = true;
+  </script>
+  <script src="../../doc-script.js"></script>
+
+</head>
+<body>
+  <div id="sidebar_wrapper">
+    <div id="sidebar_switch">
+      <span class="tree">Files</span>
+      <span class="headings">Headings</span>
+    </div>
+    <div id="tree"></div>
+    <div id="headings">
+
+      <div class="heading h1">
+        <a href="#sourcemappingurlfacebook.strategy.js.map">sourceMappingURL=facebook.strategy.js.map</a>
+      </div>
+
+    </div>
+  </div>
+  <div id="sidebar-toggle"></div>
+  <div id="container">
+    <div class="background highlight"></div>
+<table cellpadding="0" cellspacing="0">
+  <tbody>
+    
+      <tr>
+        <td class="docs">
+          <h1>facebook.strategy.js</h1>
+        </td>
+        <td class="code highlight"></td>
+      </tr>
+    
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap">
+  <a class="pilcrow" href="#section-1" id="section-1"></a>
+</div>
+
+        </td>
+        <td class="code highlight">
+          <pre class="javascript"><span class="hljs-meta">"use strict"</span>;
+<span class="hljs-keyword">var</span> __decorate = (<span class="hljs-keyword">this</span> &amp;&amp; <span class="hljs-keyword">this</span>.__decorate) || <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">decorators, target, key, desc</span>) </span>{
+    <span class="hljs-keyword">var</span> c = <span class="hljs-built_in">arguments</span>.length, r = c &lt; <span class="hljs-number">3</span> ? target : desc === <span class="hljs-literal">null</span> ? desc = <span class="hljs-built_in">Object</span>.getOwnPropertyDescriptor(target, key) : desc, d;
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">Reflect</span> === <span class="hljs-string">"object"</span> &amp;&amp; <span class="hljs-keyword">typeof</span> <span class="hljs-built_in">Reflect</span>.decorate === <span class="hljs-string">"function"</span>) r = <span class="hljs-built_in">Reflect</span>.decorate(decorators, target, key, desc);
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = decorators.length - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) <span class="hljs-keyword">if</span> (d = decorators[i]) r = (c &lt; <span class="hljs-number">3</span> ? d(r) : c &gt; <span class="hljs-number">3</span> ? d(target, key, r) : d(target, key)) || r;
+    <span class="hljs-keyword">return</span> c &gt; <span class="hljs-number">3</span> &amp;&amp; r &amp;&amp; <span class="hljs-built_in">Object</span>.defineProperty(target, key, r), r;
+};
+<span class="hljs-keyword">var</span> __metadata = (<span class="hljs-keyword">this</span> &amp;&amp; <span class="hljs-keyword">this</span>.__metadata) || <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">k, v</span>) </span>{
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">Reflect</span> === <span class="hljs-string">"object"</span> &amp;&amp; <span class="hljs-keyword">typeof</span> <span class="hljs-built_in">Reflect</span>.metadata === <span class="hljs-string">"function"</span>) <span class="hljs-keyword">return</span> <span class="hljs-built_in">Reflect</span>.metadata(k, v);
+};
+<span class="hljs-built_in">Object</span>.defineProperty(exports, <span class="hljs-string">"__esModule"</span>, { <span class="hljs-attr">value</span>: <span class="hljs-literal">true</span> });
+exports.FacebookStrategy = <span class="hljs-keyword">void</span> <span class="hljs-number">0</span>;
+<span class="hljs-keyword">const</span> passport_1 = <span class="hljs-built_in">require</span>(<span class="hljs-string">"@nestjs/passport"</span>);
+<span class="hljs-keyword">const</span> common_1 = <span class="hljs-built_in">require</span>(<span class="hljs-string">"@nestjs/common"</span>);
+<span class="hljs-keyword">const</span> passport_facebook_1 = <span class="hljs-built_in">require</span>(<span class="hljs-string">"passport-facebook"</span>);
+<span class="hljs-keyword">const</span> users_service_1 = <span class="hljs-built_in">require</span>(<span class="hljs-string">"../users/users.service"</span>);
+<span class="hljs-keyword">let</span> FacebookStrategy = <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FacebookStrategy</span> <span class="hljs-keyword">extends</span> (0, <span class="hljs-title">passport_1</span>.<span class="hljs-title">PassportStrategy</span>)(<span class="hljs-title">passport_facebook_1</span>.<span class="hljs-title">Strategy</span>, '<span class="hljs-title">facebook</span>') </span>{
+    userService;
+    <span class="hljs-keyword">constructor</span>(userService) {
+        <span class="hljs-keyword">super</span>({
+            <span class="hljs-attr">clientID</span>: process.env.FACEBOOK_APP_ID,
+            <span class="hljs-attr">clientSecret</span>: process.env.FACEBOOK_APP_SECRET,
+            <span class="hljs-attr">callbackURL</span>: <span class="hljs-string">'http://localhost:3000/auth/facebook/callback'</span>,
+            <span class="hljs-attr">profileFields</span>: [<span class="hljs-string">'id'</span>, <span class="hljs-string">'emails'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'displayName'</span>],
+        });
+        <span class="hljs-keyword">this</span>.userService = userService;
+    }
+    <span class="hljs-keyword">async</span> validate(accessToken, refreshToken, profile, done) {
+        <span class="hljs-keyword">let</span> user = <span class="hljs-keyword">await</span> <span class="hljs-keyword">this</span>.userService.findOrCreate(profile, <span class="hljs-string">'facebook'</span>);
+        done(<span class="hljs-literal">null</span>, user);
+    }
+};
+exports.FacebookStrategy = FacebookStrategy;
+exports.FacebookStrategy = FacebookStrategy = __decorate([
+    (<span class="hljs-number">0</span>, common_1.Injectable)(),
+    __metadata(<span class="hljs-string">"design:paramtypes"</span>, [users_service_1.UsersService])
+], FacebookStrategy);
+</pre>
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap" id="sourcemappingurlfacebook.strategy.js.map">
+  <h1>
+    <a href="#sourcemappingurlfacebook.strategy.js.map" name="sourcemappingurlfacebook.strategy.js.map" class="pilcrow"></a>
+sourceMappingURL=facebook.strategy.js.map
+  </h1>
+</div>
+
+        </td>
+        <td class="code highlight">
+          <pre class="javascript"></pre>
+        </td>
+      </tr>
+    
+  </tbody>
+</table>
+
+  </div>
+</body>
+</html>

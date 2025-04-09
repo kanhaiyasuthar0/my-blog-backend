@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>README.md</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="doc-style.css" />
+  <script src="doc-filelist.js"></script>
+  <script>
+    var relativeDir = "";
+    var thisFile = "README.md";
+    var defaultSidebar = true;
+  </script>
+  <script src="doc-script.js"></script>
+
+</head>
+<body>
+  <div id="sidebar_wrapper">
+    <div id="sidebar_switch">
+      <span class="tree">Files</span>
+      <span class="headings">Headings</span>
+    </div>
+    <div id="tree"></div>
+    <div id="headings">
+
+      <div class="heading h2">
+        <a href="#description">Description</a>
+      </div>
+
+      <div class="heading h2">
+        <a href="#project-setup">Project setup</a>
+      </div>
+
+      <div class="heading h2">
+        <a href="#compile-and-run-the-project">Compile and run the project</a>
+      </div>
+
+      <div class="heading h2">
+        <a href="#run-tests">Run tests</a>
+      </div>
+
+      <div class="heading h2">
+        <a href="#deployment">Deployment</a>
+      </div>
+
+      <div class="heading h2">
+        <a href="#resources">Resources</a>
+      </div>
+
+      <div class="heading h2">
+        <a href="#support">Support</a>
+      </div>
+
+      <div class="heading h2">
+        <a href="#stay-in-touch">Stay in touch</a>
+      </div>
+
+      <div class="heading h2">
+        <a href="#license">License</a>
+      </div>
+
+    </div>
+  </div>
+  <div id="sidebar-toggle"></div>
+  <div id="container">
+    <div class="docs markdown"><p align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
+</p>
+  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+    <p align="center">
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
+<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
+<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
+<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
+<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
+  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
+    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
+  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
+</p>
+  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
+  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+<div class="pilwrap" id="description">
+  <h2>
+    <a href="#description" name="description" class="pilcrow"></a>
+Description
+  </h2>
+</div>
+<p><a href="https://github.com/nestjs/nest">Nest</a> framework TypeScript starter repository.</p>
+<div class="pilwrap" id="project-setup">
+  <h2>
+    <a href="#project-setup" name="project-setup" class="pilcrow"></a>
+Project setup
+  </h2>
+</div>
+<pre><code class="bash">$ npm install
+</code></pre>
+<div class="pilwrap" id="compile-and-run-the-project">
+  <h2>
+    <a href="#compile-and-run-the-project" name="compile-and-run-the-project" class="pilcrow"></a>
+Compile and run the project
+  </h2>
+</div>
+<pre><code class="bash"><span class="hljs-comment"># development</span>
+$ npm run start
+
+<span class="hljs-comment"># watch mode</span>
+$ npm run start:dev
+
+<span class="hljs-comment"># production mode</span>
+$ npm run start:prod
+</code></pre>
+<div class="pilwrap" id="run-tests">
+  <h2>
+    <a href="#run-tests" name="run-tests" class="pilcrow"></a>
+Run tests
+  </h2>
+</div>
+<pre><code class="bash"><span class="hljs-comment"># unit tests</span>
+$ npm run <span class="hljs-built_in">test</span>
+
+<span class="hljs-comment"># e2e tests</span>
+$ npm run <span class="hljs-built_in">test</span>:e2e
+
+<span class="hljs-comment"># test coverage</span>
+$ npm run <span class="hljs-built_in">test</span>:cov
+</code></pre>
+<div class="pilwrap" id="deployment">
+  <h2>
+    <a href="#deployment" name="deployment" class="pilcrow"></a>
+Deployment
+  </h2>
+</div>
+<p>When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the <a href="https://docs.nestjs.com/deployment">deployment documentation</a> for more information.</p>
+<p>If you are looking for a cloud-based platform to deploy your NestJS application, check out <a href="https://mau.nestjs.com">Mau</a>, our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:</p>
+<pre><code class="bash">$ npm install -g @nestjs/mau
+$ mau deploy
+</code></pre>
+<p>With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.</p>
+<div class="pilwrap" id="resources">
+  <h2>
+    <a href="#resources" name="resources" class="pilcrow"></a>
+Resources
+  </h2>
+</div>
+<p>Check out a few resources that may come in handy when working with NestJS:</p>
+<ul>
+<li>Visit the <a href="https://docs.nestjs.com">NestJS Documentation</a> to learn more about the framework.</li>
+<li>For questions and support, please visit our <a href="https://discord.gg/G7Qnnhy">Discord channel</a>.</li>
+<li>To dive deeper and get more hands-on experience, check out our official video <a href="https://courses.nestjs.com/">courses</a>.</li>
+<li>Deploy your application to AWS with the help of <a href="https://mau.nestjs.com">NestJS Mau</a> in just a few clicks.</li>
+<li>Visualize your application graph and interact with the NestJS application in real-time using <a href="https://devtools.nestjs.com">NestJS Devtools</a>.</li>
+<li>Need help with your project (part-time to full-time)? Check out our official <a href="https://enterprise.nestjs.com">enterprise support</a>.</li>
+<li>To stay in the loop and get updates, follow us on <a href="https://x.com/nestframework">X</a> and <a href="https://linkedin.com/company/nestjs">LinkedIn</a>.</li>
+<li>Looking for a job, or have a job to offer? Check out our official <a href="https://jobs.nestjs.com">Jobs board</a>.</li>
+</ul>
+<div class="pilwrap" id="support">
+  <h2>
+    <a href="#support" name="support" class="pilcrow"></a>
+Support
+  </h2>
+</div>
+<p>Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please <a href="https://docs.nestjs.com/support">read more here</a>.</p>
+<div class="pilwrap" id="stay-in-touch">
+  <h2>
+    <a href="#stay-in-touch" name="stay-in-touch" class="pilcrow"></a>
+Stay in touch
+  </h2>
+</div>
+<ul>
+<li>Author - <a href="https://twitter.com/kammysliwiec">Kamil Myśliwiec</a></li>
+<li>Website - <a href="https://nestjs.com/">https://nestjs.com</a></li>
+<li>Twitter - <a href="https://twitter.com/nestframework">@nestframework</a></li>
+</ul>
+<div class="pilwrap" id="license">
+  <h2>
+    <a href="#license" name="license" class="pilcrow"></a>
+License
+  </h2>
+</div>
+<p>Nest is <a href="https://github.com/nestjs/nest/blob/master/LICENSE">MIT licensed</a>.</p>
+</div>
+  </div>
+</body>
+</html>
